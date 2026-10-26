@@ -1,0 +1,13 @@
+{
+  "schema": 2,
+  "packages": [
+    {
+      "name": "hello",
+      "path": ".",
+      "targets": {
+        "go": true
+      },
+      "summary": "End-to-end publication smoke test for the Wisp test server."
+    }
+  ]
+}
