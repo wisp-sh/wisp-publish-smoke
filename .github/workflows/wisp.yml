@@ -1,0 +1,17 @@
+name: Publish smoke library
+on:
+  release:
+    types: [published]
+permissions: {}
+jobs:
+  wisp:
+    permissions:
+      contents: read
+      actions: read
+      id-token: write
+      attestations: write
+    uses: wisp-sh/wisp/.github/workflows/wisp-build.yml@00246edd34ff600f30c978c001769d381d4ba2e6
+    with:
+      publish: false
+      wisp_url: https://web-production-6bbc2.up.railway.app
+      go_host: web-production-6bbc2.up.railway.app
