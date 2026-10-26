@@ -9,7 +9,7 @@ After the release is recorded, run the Go consumer on Linux x86_64 with Go 1.27:
 ```sh
 cd consumer
 GOPROXY=https://web-production-6bbc2.up.railway.app/api/go,https://proxy.golang.org \
-GONOSUMDB='web-production-6bbc2.up.railway.app/*' go run .
+GONOSUMDB='web-production-6bbc2.up.railway.app/*' go run -mod=mod .
 ```
 
 The test uses the deployment's own module proxy. The consumer must print
